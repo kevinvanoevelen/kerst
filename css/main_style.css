@@ -5,8 +5,43 @@
 /* ____FONTS____ */
 
 @font-face {
+	font-family: LatoThin;
+	src: url('../font/Lato-Thin.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;	
+}
+
+@font-face {
+	font-family: LatoLight;
+	src: url('../font/Lato-Light.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;	
+}
+
+@font-face {
 	font-family: LatoRegular;
 	src: url('../font/Lato-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;	
+}
+
+@font-face {
+	font-family: MolleRegular;
+	src: url('../font/Molle-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;	
+}
+
+@font-face {
+	font-family: NovaSlim;
+	src: url('../font/NovaSlim.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;	
+}
+
+@font-face {
+	font-family: PlayballRegular;
+	src: url('../font/Playball-Regular.ttf') format('truetype');
 	font-style: normal;
 	font-weight: normal;	
 }
@@ -24,7 +59,7 @@ body {
 	background: rgba(255,255,222,0.8);
 }
 
- header, nav, section, footer, article, aside, div, p, h1, h2, h3, h4, h5, h6, ul, li {
+ header, nav, section, footer, article, aside, div, p, h1, h2, h3, h4, h5, h6, ul, li, img {
 	display: block;
 	margin: 0px;
 	padding: 0px;	
@@ -75,24 +110,40 @@ header {
 	/*background: rgba(235,33,33,0.8);*/
 }
 
+.logo_wrap a {
+	display: block;
+	width: 96px;
+	height: 96px;
+	margin: 15px auto;
+	border-radius: 25%;
+	background: rgba(255,255,222,0.2);
+}
+
+.logo_wrap a img {
+	width: 96px;
+	height: 96px;
+}
+
 .main_header {
 	float: left;
 	width: calc(100% - 252px);
 	height: 126px;
-	line-height: 126px;
-	font-size: 72px;
+	line-height: 130px;
+	font-family: PlayballRegular;
+	font-size: 92px;
+	font-weight: normal;
 	/*background: rgba(35,233,33,0.8);*/
 }
 
 
 /* ____NAVIGATION____ */
 
-section aside .nav_item {
+/*section aside .nav_item {
 	overflow: hidden;
 	width: 94%;
 	height: 74px;
 	margin: 0px auto 0px auto;
-	/*background: rgba(77,77,177,0.8);*/
+	/background: rgba(77,77,177,0.8);*
 }
 
 nav {
@@ -100,7 +151,7 @@ nav {
 	float: left;
 	width: 74px;
 	height: 74px;
-	/*background: rgba(35,233,33,0.4);*/
+	/background: rgba(35,233,33,0.4);*
 }
 
 nav li {
@@ -121,8 +172,8 @@ section aside .nav_item .dash {
 	float: left;
 	width: calc(100% - 74px);
 	height: 100px;
-	/*background: rgba(222,2,222,0.6);*/
-}
+	*background: rgba(222,2,222,0.6);*
+}*/
 
 
 /* ____CONTENT STYLE____ */
@@ -145,15 +196,17 @@ section article {
 section article h2 {
 	height: 56px;
 	margin: 0px auto 12px auto;
-	line-height: 56px;
+	line-height: 60px;
+	font-family: NovaSlim;
 	font-size: 32px;
+	font-weight: normal;
 	background: rgba(35,33,33,0.8);
 }
 
 section article .item {
-	width: 100%;
+	width: 98%;
 	min-height: 200px;
-	margin: 0px auto 12px auto;
+	margin: 0px 0px 12px auto;
 	background: rgba(177,77,77,0.8);
 }
 
@@ -166,15 +219,17 @@ section aside {
 section aside h3 {
 	height: 36px;
 	margin: 0px auto 6px auto;
-	line-height: 36px;
+	line-height: 40px;
+	font-family: NovaSlim;
 	font-size: 22px;
+	font-weight: normal;
 	background: rgba(35,33,33,0.4);
 }
 
 section aside .side_item {
-	width: 94%;
-	min-height: 100px;
-	margin: 0px auto 6px auto;
+	width: 100%;
+	min-height: 160px;
+	margin: 0px 0px 6px 0px;
 	background: rgba(77,77,177,0.8);
 }
 
