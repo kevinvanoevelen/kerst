@@ -5,8 +5,8 @@
 /* ____FONTS____ */
 
 @font-face {
-	font-family: ;
-	src: url() format();
+	font-family: LatoRegular;
+	src: url('../font/Lato-Regular.ttf') format('truetype');
 	font-style: normal;
 	font-weight: normal;	
 }
@@ -17,11 +17,11 @@ body {
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
-	font-family: verdana, sans-serif;
+	font-family: LatoRegular, verdana, sans-serif;
 	font-size: 16px;
 	color: rgba(110,90,90,0.8);
 	line-height: 1.5;
-	background: beige;	
+	background: rgba(255,255,222,0.8);
 }
 
  header, nav, section, footer, article, aside, div, p, h1, h2, h3, h4, h5, h6, ul, li {
@@ -30,23 +30,143 @@ body {
 	padding: 0px;	
 }
 
-a {
+h1, h2, h3, h4, h5, h6, a, input, button, footer {
+	text-align: center;
+}
+
+a, input, button {
 	display: inline-block;
+	margin: 0px;
+	padding: 0px;
 	text-decoration: none;
 	color: inherit;	
 }
 
+a:active, a:focus, input:active, input:focus, button:active, button:focus {
+	outline: 0;
+}
+
+.wrapper, header, section, h2, h3 {
+	border-radius: 4px;
+}
+
+.wrapper {
+	width: 96%;
+	margin: 12px auto 24px auto;
+	background: rgba(222,111,222,0.6);
+}
+
+
 /* ____HEADER STYLE____ */
 
+header {
+	overflow: hidden;
+	width: 100%;
+	height: 126px;
+	margin: 0px auto 12px auto;
+	color: rgba(255,255,222,0.8);
+	background: rgba(35,33,33,0.8);
+}
+
+.logo_wrap {
+	float: left;
+	width: 252px;
+	height: 126px;
+	background: rgba(235,33,33,0.8);
+}
+
+.main_header {
+	float: left;
+	width: calc(100% - 252px);
+	height: 126px;
+	line-height: 126px;
+	font-size: 72px;
+	background: rgba(35,233,33,0.8);
+}
+
+
+/* ____NAVIGATION____ */
+
+nav, nav li, nav li a {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 12px;
+	line-height: 50px;
+	color: rgba(45,40,40,0.8);
+	font-weight: 400;
+	border-radius: 50%;
+	/*background: rgba(35,33,233,0.2);*/
+}
+
+nav li a {
+	background: url('../img/home_button.jpg');
+	background-size: cover;
+}
 
 
 /* ____CONTENT STYLE____ */
 
+section {
+	overflow: hidden;
+	background: rgba(35,33,33,0.6);
+}
 
+section article h2, section aside h3 {
+	color: rgba(255,255,222,0.8);
+}
+
+section article {
+	float: right;
+	width: 80%;
+	min-height: 200px;
+}
+
+section article h2 {
+	height: 56px;
+	margin: 0px auto 12px auto;
+	line-height: 56px;
+	font-size: 32px;
+	background: rgba(35,33,33,0.8);
+}
+
+section article .item {
+	min-height: 200px;
+	margin: 0px auto 12px auto;
+	background: rgba(177,77,77,0.8);
+}
+
+section aside {
+	float: right;
+	width: 20%;
+	min-height: 200px;
+}
+
+section aside h3 {
+	height: 36px;
+	margin: 0px auto 6px auto;
+	line-height: 36px;
+	font-size: 22px;
+	background: rgba(35,33,33,0.4);
+}
+
+section aside .side_item {
+	min-height: 100px;
+	margin: 0px auto 6px auto;
+	background: rgba(77,77,177,0.8);
+}
 
 /* ____FOOTER STYLE____ */
 
+.main_footer {
+	height: 30px;
+	margin: 24px auto 0px auto;
+}
 
+.main_footer p {
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+}
 
 
 
