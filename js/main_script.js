@@ -22,28 +22,21 @@ wrapper.style.minHeight = (inner_height-(wrapper_top+wrapper_bottom)) + "px";
 
 var header_arr = document.getElementsByClassName('item');
 
-console.log(header_arr);
-
 for(var i = 0; i < header_arr.length; i++) {
 
 	var header = header_arr[i].children[0];
 
 	header.onclick = function() {
 
+		var self = this.id;
 		var ids = this.parentNode.id;
 		var item = document.getElementById(ids);
 
-		console.log(" in onclick " + item.classList.contains('header_open'));
-
 		if (item.classList.contains('header_open') == false) {
 			
-			console.log(" itr_header = 0");
-
 			setTimeout(function() {
 
-				open_close(ids,"out");
-
-				setTimeout(function() { document.getElementById(ids).style.height = "500px"; },100);
+				open_close(self,ids,"out");
 
 			},100);
 
@@ -51,13 +44,9 @@ for(var i = 0; i < header_arr.length; i++) {
 
 		} else if (item.classList.contains('header_open') == true) {
 
-			console.log(" itr_header = 1");
-
 			setTimeout(function() {
 
-				open_close(ids,"in");
-
-				setTimeout(function() { document.getElementById(ids).style.height = "200px"; },100);
+				open_close(self,ids,"in");
 
 			},100);
 
@@ -71,54 +60,96 @@ for(var i = 0; i < header_arr.length; i++) {
 
 
 
+function open_close(self,id,in_out) {
 
-function open_close(id,in_out) {
+	var h_upper = 480;
+	var h_lower = 200;
+
+	var o_upper = 0.4;
+	var o_lower = 0;
 
 	if (in_out == "in") {
-		var height = 500;
-		var border = 200;
+
+		var height = h_upper;
+		var border = h_lower;
+		var opac = o_upper;
+
 		var opr = (-1);
+
 	} else if (in_out == "out") {
-		var height = 200;
-		var border = 500;
+
+		var height = h_lower;
+		var border = h_upper;
+		var opac = o_lower;
+
 		var opr = (1);
+
 	} else {
+
 		alert("you should type either 'in' or 'out' in open_close()");
+
 	};
 
-	var speed_ctrl = 1;
+	var speed_ctrl = 0;
 
-	var fb_int = setInterval(anim,5);
+	var radius = set_radius(0);
+
+	var interval = setInterval(anim,5);
+
+	function set_radius(rad) {
+
+		document.getElementById(self).style.borderBottomLeftRadius = rad + "px";
+
+		document.getElementById(self).style.borderBottomRightRadius = rad + "px";
+
+	};
 
 	function anim() {
 
-		if ((opr == (-1) && height <= border) || (opr == (1) && height >= border)) {
+		var set_style = function() {
 
-			console.log("right before clearInterval " + height);
+			if (height > h_upper) { height = h_upper; } else if (height < h_lower) { height = h_lower; };
 
-			if (opr == (-1)) {
-				document.getElementById(id).style.height = "200px";
-				heigth = 200;
-			} else if (opr == (1)) {
-				document.getElementById(id).style.height = "500px";
-				height = 500;
-			};
-
-			clearInterval(fb_int);
-
-			console.log("right after clearInterval");
-
-		} else {
-			
-			console.log("in fall_back " + height);
+			if (opac > o_upper) { opac = o_upper; } else if (opac < o_lower) { opac = o_lower; };
 
 			document.getElementById(id).style.height = height + "px";
 
-			height = (height+(speed_ctrl*opr));
+			document.getElementById(id).style.background = "rgba(177,77,77," + opac.toFixed(2) + ")";
 
+		};
+
+		if ((opr == (-1) && height <= border) || (opr == (1) && height >= border)) {
+
+			clearInterval(interval);
+
+			if (opr == (-1)) {
+
+				heigth = h_lower;
+				opac = o_lower;
+
+				set_style();
+
+				set_radius(6);
+
+			} else if (opr == (1)) {
+
+				height = h_upper;
+				opac = o_upper;
+
+				set_style();
+
+			};
+
+		} else {
+			
+			set_style();
+
+			height = (height+(speed_ctrl*opr));
+			opac = (opac+((speed_ctrl*0.0012)*opr));
 			speed_ctrl = (speed_ctrl+0.25);
 
 		};
+
 	};
 
 };

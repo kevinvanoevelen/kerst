@@ -56,7 +56,7 @@ body {
 	font-size: 16px;
 	color: rgba(110,90,90,0.8);
 	line-height: 1.5;
-	background: rgba(255,255,222,0.9);
+	background: rgba(5,5,2,0.86);
 }
 
  header, nav, section, footer, article, aside, div, p, h1, h2, h3, h4, h5, h6, ul, li, img {
@@ -82,7 +82,7 @@ a:active, a:focus, input:active, input:focus, button:active, button:focus {
 }
 
 .wrapper, header, section, h2, h3, .item, .side_item {
-	border-radius: 4px;
+	border-radius: 6px;
 }
 
 .wrapper {
@@ -100,6 +100,7 @@ header {
 	height: 126px;
 	margin: 0px auto 24px auto;
 	color: rgba(255,255,222,1);
+	box-shadow: 0px 0px 4px 0px rgba(255,255,222,1);
 	background: rgba(35,33,33,0.8);
 }
 
@@ -185,6 +186,7 @@ section {
 
 section article h2, section aside h3 {
 	color: rgba(255,255,222,0.8);
+	cursor: pointer;
 }
 
 section article {
@@ -200,14 +202,14 @@ section article h2 {
 	font-family: NovaSlim;
 	font-size: 32px;
 	font-weight: normal;
-	background: rgba(177,77,77,0.8);
+	background: rgba(177,77,77,0.4);
 }
 
 section article .item {
 	width: 98%;
 	height: 200px;
-	margin: 0px 0px 12px auto;
-	background: rgba(177,77,77,0.8);
+	margin: 0px 0px 18px auto;
+	background: rgba(177,77,77,0);
 }
 
 section aside {
