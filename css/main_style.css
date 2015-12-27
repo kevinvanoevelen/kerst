@@ -56,7 +56,7 @@ body {
 	font-size: 16px;
 	color: rgba(110,90,90,0.8);
 	line-height: 1.5;
-	background: rgba(255,255,222,0.8);
+	background: rgba(255,255,222,0.9);
 }
 
  header, nav, section, footer, article, aside, div, p, h1, h2, h3, h4, h5, h6, ul, li, img {
@@ -87,7 +87,7 @@ a:active, a:focus, input:active, input:focus, button:active, button:focus {
 
 .wrapper {
 	width: 96%;
-	margin: 12px auto 24px auto;
+	margin: 18px auto 24px auto;
 	/*background: rgba(222,111,222,0.6);*/
 }
 
@@ -99,7 +99,7 @@ header {
 	width: 100%;
 	height: 126px;
 	margin: 0px auto 24px auto;
-	color: rgba(255,255,222,0.8);
+	color: rgba(255,255,222,1);
 	background: rgba(35,33,33,0.8);
 }
 
@@ -200,12 +200,12 @@ section article h2 {
 	font-family: NovaSlim;
 	font-size: 32px;
 	font-weight: normal;
-	background: rgba(35,33,33,0.8);
+	background: rgba(177,77,77,0.8);
 }
 
 section article .item {
 	width: 98%;
-	min-height: 200px;
+	height: 200px;
 	margin: 0px 0px 12px auto;
 	background: rgba(177,77,77,0.8);
 }
@@ -223,7 +223,7 @@ section aside h3 {
 	font-family: NovaSlim;
 	font-size: 22px;
 	font-weight: normal;
-	background: rgba(35,33,33,0.4);
+	background: rgba(77,77,177,0.8);
 }
 
 section aside .side_item {
@@ -236,14 +236,33 @@ section aside .side_item {
 /* ____FOOTER STYLE____ */
 
 .main_footer {
+	overflow: hidden;
+	width: 100%;
 	height: 30px;
 	margin: 24px auto 0px auto;
 }
 
-.main_footer p {
+.main_footer .footer_space {
+	float: left;
+	width: 252px;
+	height: 30px;
+	background: lime;
+}
+
+.main_footer .footer_text_wrap {
+	float: right;
+	width: calc(100% - 252px);
+	height: 30px;
+	background: skyblue;
+}
+
+.main_footer .footer_text {
+	float: right;
+	width: 98%;
 	height: 30px;
 	line-height: 30px;
 	font-size: 14px;
+	background: pink;
 }
 
 
