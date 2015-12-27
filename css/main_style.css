@@ -99,8 +99,8 @@ header {
 	width: 100%;
 	height: 126px;
 	margin: 0px auto 24px auto;
-	color: rgba(255,255,222,1);
-	box-shadow: 0px 0px 4px 0px rgba(255,255,222,1);
+	color: rgba(255,245,220,1);
+	box-shadow: 0px 0px 4px 0px rgba(255,245,220,1);
 	background: rgba(35,33,33,0.8);
 }
 
@@ -117,7 +117,7 @@ header {
 	height: 96px;
 	margin: 15px auto;
 	border-radius: 25%;
-	background: rgba(255,255,222,0.2);
+	background: rgba(255,245,220,0.2);
 }
 
 .logo_wrap a img {
@@ -137,46 +137,6 @@ header {
 }
 
 
-/* ____NAVIGATION____ */
-
-/*section aside .nav_item {
-	overflow: hidden;
-	width: 94%;
-	height: 74px;
-	margin: 0px auto 0px auto;
-	/background: rgba(77,77,177,0.8);*
-}
-
-nav {
-	overflow: hidden;
-	float: left;
-	width: 74px;
-	height: 74px;
-	/background: rgba(35,233,33,0.4);*
-}
-
-nav li {
-	width: 50px;
-	height: 50px;
-	margin: 12px;
-}
-
-nav li a {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background: url('../img/home_button.jpg');
-	background-size: cover;
-}
-
-section aside .nav_item .dash {
-	float: left;
-	width: calc(100% - 74px);
-	height: 100px;
-	*background: rgba(222,2,222,0.6);*
-}*/
-
-
 /* ____CONTENT STYLE____ */
 
 section {
@@ -185,7 +145,7 @@ section {
 }
 
 section article h2, section aside h3 {
-	color: rgba(255,255,222,0.8);
+	color: rgba(255,245,220,0.8);
 	cursor: pointer;
 }
 
@@ -244,30 +204,37 @@ section aside .side_item {
 	margin: 24px auto 0px auto;
 }
 
+.main_footer .footer_text, .main_footer .separator, .main_footer .footer_space {
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	color: rgba(255,245,220,0.8);
+}
+
 .main_footer .footer_space {
 	float: left;
 	width: 252px;
-	height: 30px;
-	background: lime;
+	/*background: lime;*/
 }
 
 .main_footer .footer_text_wrap {
 	float: right;
 	width: calc(100% - 252px);
 	height: 30px;
-	background: skyblue;
+	/*background: skyblue;*/
 }
 
 .main_footer .footer_text {
 	float: right;
 	width: 98%;
-	height: 30px;
-	line-height: 30px;
-	font-size: 14px;
-	background: pink;
+	/*background: pink;*/
 }
 
-
+.main_footer .separator {
+	float: right;
+	width: 2%;
+	/*background: pink;*/
+}
 
 
 

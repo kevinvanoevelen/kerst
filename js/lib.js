@@ -11,6 +11,10 @@ function byCl(class_name) {
 	document.getElementsByClassName(class_name);
 };
 
-function message(mess) {
+function a(mess) {
 	alert(mess);
+};
+
+function p(mess) {
+	prompt(mess);
 };
