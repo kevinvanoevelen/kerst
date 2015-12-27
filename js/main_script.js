@@ -114,7 +114,7 @@ function open_close(self,id,in_out) {
 
 	function anim() {
 
-		if (((opr == (-1) && height <= border) || (opr == 1 && height >= border)) || (err == 1)) {
+		if ((opr == (-1) && height <= border) || (opr == 1 && height >= border)) {
 
 			clearInterval(interval);
 
