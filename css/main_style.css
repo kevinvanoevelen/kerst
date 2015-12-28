@@ -129,9 +129,10 @@ header {
 	margin: 15px auto;
 	border-radius: 5%;
 	cursor: pointer;
-	box-shadow: 0px 0px 18px 1px rgba(255,245,220,0);
+	box-shadow: 0px 0px 0px 0px rgba(255,245,220,0);
 	/*border: 1px solid rgba(75,63,63,0.8);*/
 	/*background: #E9ECD2;*/
+	background: url('../img/header/baubles_02.svg');
 }
 
 .main_header {
