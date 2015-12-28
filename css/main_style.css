@@ -111,18 +111,27 @@ header {
 	/*background: rgba(235,33,33,0.8);*/
 }
 
-.logo_wrap a {
+/*.logo_wrap a {
 	display: block;
-	width: 96px;
+	width: 128px;
 	height: 96px;
 	margin: 15px auto;
-	border-radius: 25%;
-	background: rgba(255,245,220,0.2);
-}
+	border-radius: 5%;
+	box-shadow: 0px 0px 18px 1px rgba(255,245,220,1);
+	/*background: rgba(255,245,220,0.2);
+	/*background: #FBFAE1;
+}*/
 
-.logo_wrap a img {
-	width: 96px;
+.logo_wrap img {
+	display: block;
+	width: auto;
 	height: 96px;
+	margin: 15px auto;
+	border-radius: 5%;
+	cursor: pointer;
+	box-shadow: 0px 0px 18px 1px rgba(255,245,220,0);
+	/*border: 1px solid rgba(75,63,63,0.8);*/
+	/*background: #E9ECD2;*/
 }
 
 .main_header {
@@ -240,7 +249,28 @@ section aside .side_item {
 
 
 
+/* COLOURS */
+/*
 
+#98D3B7 brightish greenish
+#AF313C darkish redish
+#D55D40 reddish
+#F7E8AF yellowish
+#B0CBB4 greenish
+#A19C58 greenish
+#F7F8D9 yellowish white
+#812822 reddish
+#42B3AF blueish
+#FFCB6C
+#FF8A85
+#8CC6A5
+#86CBD0
+#F35D65
+#49AF9C
+#AC9D95
+
+
+*/
 
 
 

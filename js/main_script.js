@@ -18,6 +18,81 @@ wrapper.style.minHeight = (inner_height-(wrapper_top+wrapper_bottom)) + "px";
 /* ***************************************************************************************************************************** */
 
 
+// header img picker
+
+var img_random = Math.floor(Math.random()*5);
+
+var img_arr = [
+		"baubles_02.svg",
+		"retro_christmas_card.jpg",
+		"retro_santa_03.jpg",
+		"retro_snowman_02.jpg",
+		"santa_classic_03.jpg"
+	];
+
+var img = img_arr[img_random];
+
+var img_loc = document.getElementById('logo');
+
+img_loc.src = "./img/header/" + img;
+img_loc.data = img;
+
+if (img_loc.width == 96) {
+
+	img_loc.style.border = "1px solid rgba(75,63,63,0.8)";
+
+	setTimeout(function() { set_header_img(); },1000)
+	
+} else {
+
+	img_loc.style.borderRadius = "5%";
+	if (img_loc.data !== "baubles_02.svg") { img_loc.style.boxShadow = "0px 0px 18px 1px rgba(255,245,220,1)"; };
+
+};
+
+function set_header_img() {
+
+	var radius = 5;
+	var rad = 0;
+	var opac = 0;
+
+	var interval = setInterval(ch_radius,5);	
+
+	function ch_radius() {
+
+		if (radius >= 48) {
+
+			clearInterval(interval);
+
+			img_loc.style.borderRadius = "48px";
+			img_loc.style.boxShadow = "0px 0px 18px 0px rgba(255,245,220,0.8)";
+
+		} else {
+
+			if (opac > 1) { opac = 1; };
+
+			img_loc.style.borderRadius = radius + "px";
+			img_loc.style.boxShadow = "0px 0px 22px 2px rgba(255,245,220," + opac.toFixed(2) + ")";
+
+			radius = (radius+rad);
+			rad = (rad+0.015);
+			opac = rad;
+
+		};
+
+	};
+
+};
+
+img_loc.onclick = function() {
+
+	window.location.href = "http://kevinvanoevelen.github.io";
+
+};
+
+/* ***************************************************************************************************************************** */
+/* ***************************************************************************************************************************** */
+
 // open/close the main items
 
 var header_arr = document.getElementsByClassName('item');
@@ -31,8 +106,31 @@ for(var i = 0; i < header_arr.length; i++) {
 		var self = this.id;
 		var ids = this.parentNode.id;
 		var item = document.getElementById(ids);
+		var items = document.getElementById('article_01').getElementsByClassName('item');
+		console.log(items[0]);
 
 		if (!item.classList.contains('header_open')) {
+
+			
+			for(var i = 0; i < items.length; i++) {
+				console.log("in items loop: " + items[i].classList);
+				if (items[i].classList.contains('header_open')) {
+					console.log("in items loop class found");
+					var ids_items = items[i].id;
+					var self_items = document.getElementById(ids).children[0].id;
+					setTimeout(function() {
+
+						open_close(self_items,ids_items,"in");
+
+					},100);
+					items[i].classList.toggle('header_open',false);
+					break;
+				} else {
+					console.log("in items loop class check");
+					continue;
+				};
+			};
+			
 			
 			setTimeout(function() {
 
@@ -135,6 +233,8 @@ function open_close(self,id,in_out) {
 				set_style();
 
 			};
+
+			// setTimeout(function() { window.location.href = "#" + id; },200);
 
 		} else {
 			
