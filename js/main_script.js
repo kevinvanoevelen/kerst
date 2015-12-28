@@ -117,7 +117,7 @@ for(var i = 0; i < header_arr.length; i++) {
 				if (items[i].classList.contains('header_open')) {
 					console.log("in items loop class found");
 					var ids_items = items[i].id;
-					var self_items = document.getElementById(ids).children[0].id;
+					var self_items = document.getElementById(ids_items).children[0].id;
 					setTimeout(function() {
 
 						open_close(self_items,ids_items,"in");
@@ -169,7 +169,6 @@ function open_close(self,id,in_out) {
 	if (in_out == "in") {
 
 		var height = h_upper;
-		var border = h_lower;
 		var opac = o_upper;
 
 		var opr = (-1);
@@ -177,16 +176,15 @@ function open_close(self,id,in_out) {
 	} else if (in_out == "out") {
 
 		var height = h_lower;
-		var border = h_upper;
 		var opac = o_lower;
 
 		var opr = 1;
 
+		set_radius(0);
+
 	};
 
 	var speed_ctrl = 0;
-
-	var radius = set_radius(0);
 
 	var interval = setInterval(anim,5);
 
@@ -212,7 +210,7 @@ function open_close(self,id,in_out) {
 
 	function anim() {
 
-		if ((opr == (-1) && height <= border) || (opr == 1 && height >= border)) {
+		if ((opr == (-1) && height <= h_lower) || (opr == 1 && height >= h_upper)) {
 
 			clearInterval(interval);
 
