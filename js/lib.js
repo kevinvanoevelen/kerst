@@ -18,3 +18,7 @@ function a(mess) {
 function p(mess) {
 	prompt(mess);
 };
+
+function c(mess) {
+	console.log(mess);
+};

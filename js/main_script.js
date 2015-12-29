@@ -1,24 +1,27 @@
 /* MAIN JAVASCRIPT PAGE */
 
 	
-//	adjusting the height of the #wrapper
-//	setting min-height to window height minus the top and bottom margins
+//	capturing the window width and height for further use
 
 var inner_width = window.innerWidth;
 var inner_height = window.innerHeight;
+
+
+//setting the min-height of the .wrapper for dev in early stages so it is open with footer at the bottom
 
 var wrapper = document.getElementById('wrapper');
 var wrapper_top = 12; // .wrapper margin top
 var wrapper_bottom = 24; // .wrapper margin bottom
 
-// automatically calculates and sets the min height of .wrapper for dev in early stages so it is open w. footer at the bottom
+// automatically calculates and sets the min height of .wrapper
 wrapper.style.minHeight = (inner_height-(wrapper_top+wrapper_bottom)) + "px";
 
 /* ***************************************************************************************************************************** */
 /* ***************************************************************************************************************************** */
 
 
-// header img picker
+
+// header random image picker
 
 var img_random = Math.floor(Math.random()*5);
 
@@ -37,20 +40,54 @@ var img_loc = document.getElementById('logo');
 img_loc.src = "./img/header/" + img;
 img_loc.data = img;
 
-if (img_loc.width == 96) {
+var timeout_header_img = setTimeout(check_img,100);
 
-	img_loc.style.border = "1px solid rgba(75,63,63,0.8)";
+function check_img() {
+	if (img_loc.width == 96) {
 
-	setTimeout(function() { set_header_img(); },1000)
-	
-} else {
+		img_loc.style.background = "#6F5A55";
+		img_loc.style.border = "1px solid rgba(65,25,12,0)";
 
-	img_loc.style.borderRadius = "5%";
-	if (img_loc.data !== "baubles_02.svg") { img_loc.style.boxShadow = "0px 0px 18px 1px rgba(255,245,220,1)"; };
+		set_shadow();
+		setTimeout(function() { set_radius(); },1600)
+		
+	} else {
+
+		img_loc.style.borderRadius = "5%";
+		if (img_loc.data !== "baubles_02.svg") { img_loc.style.border = "1px solid rgba(255,245,220,0.8)"; set_shadow(); };  // 
+
+	};
 
 };
 
-function set_header_img() {
+function set_shadow() {
+	var opac = 0;
+
+	var interval = setInterval(ch_shadow,5);	
+
+	function ch_shadow() {
+
+		if (opac >= 1) {
+
+			if (opac > 1) { opac = 1; };
+
+			clearInterval(interval);
+
+			img_loc.style.boxShadow = "0px 0px 18px 0px rgba(255,245,220,0.8)";
+
+		} else {
+
+			img_loc.style.boxShadow = "0px 0px 22px 2px rgba(255,245,220," + opac.toFixed(2) + ")";
+
+			opac = (opac+0.015);
+
+		};
+
+	};
+
+};
+
+function set_radius() {
 
 	var radius = 5;
 	var rad = 0;
@@ -65,14 +102,14 @@ function set_header_img() {
 			clearInterval(interval);
 
 			img_loc.style.borderRadius = "48px";
-			img_loc.style.boxShadow = "0px 0px 18px 0px rgba(255,245,220,0.8)";
+			img_loc.style.border = "1px solid rgba(75,35,22,0.4)";
 
 		} else {
 
-			if (opac > 1) { opac = 1; };
+			if (opac > 0.45) { opac = 0.45; };
 
 			img_loc.style.borderRadius = radius + "px";
-			img_loc.style.boxShadow = "0px 0px 22px 2px rgba(255,245,220," + opac.toFixed(2) + ")";
+			img_loc.style.border = "1px solid rgba(75,35,22," + opac.toFixed(2) + ")";
 
 			radius = (radius+rad);
 			rad = (rad+0.015);
@@ -93,6 +130,8 @@ img_loc.onclick = function() {
 /* ***************************************************************************************************************************** */
 /* ***************************************************************************************************************************** */
 
+
+
 // open/close the main items
 
 var header_arr = document.getElementsByClassName('item');
@@ -107,15 +146,15 @@ for(var i = 0; i < header_arr.length; i++) {
 		var ids = this.parentNode.id;
 		var item = document.getElementById(ids);
 		var items = document.getElementById('article_01').getElementsByClassName('item');
-		console.log(items[0]);
+		c(items[0]);
 
 		if (!item.classList.contains('header_open')) {
 
 			
 			for(var i = 0; i < items.length; i++) {
-				console.log("in items loop: " + items[i].classList);
+				c("in items loop: " + items[i].classList);
 				if (items[i].classList.contains('header_open')) {
-					console.log("in items loop class found");
+					c("in items loop class found");
 					var ids_items = items[i].id;
 					var self_items = document.getElementById(ids_items).children[0].id;
 					setTimeout(function() {
@@ -126,7 +165,7 @@ for(var i = 0; i < header_arr.length; i++) {
 					items[i].classList.toggle('header_open',false);
 					break;
 				} else {
-					console.log("in items loop class check");
+					c("in items loop class check");
 					continue;
 				};
 			};

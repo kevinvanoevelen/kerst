@@ -81,6 +81,10 @@ a:active, a:focus, input:active, input:focus, button:active, button:focus {
 	outline: 0;
 }
 
+* {
+	outline: 0;
+}
+
 .wrapper, header, section, h2, h3, .item, .side_item {
 	border-radius: 6px;
 }
@@ -111,28 +115,16 @@ header {
 	/*background: rgba(235,33,33,0.8);*/
 }
 
-/*.logo_wrap a {
-	display: block;
-	width: 128px;
-	height: 96px;
-	margin: 15px auto;
-	border-radius: 5%;
-	box-shadow: 0px 0px 18px 1px rgba(255,245,220,1);
-	/*background: rgba(255,245,220,0.2);
-	/*background: #FBFAE1;
-}*/
-
 .logo_wrap img {
 	display: block;
 	width: auto;
 	height: 96px;
-	margin: 15px auto;
+	margin: 14px auto;
 	border-radius: 5%;
 	cursor: pointer;
 	box-shadow: 0px 0px 0px 0px rgba(255,245,220,0);
-	/*border: 1px solid rgba(75,63,63,0.8);*/
-	/*background: #E9ECD2;*/
-	background: url('../img/header/baubles_02.svg');
+	border: 1px solid rgba(255,245,220,0);
+	background: rgba(35,33,33,0);
 }
 
 .main_header {
