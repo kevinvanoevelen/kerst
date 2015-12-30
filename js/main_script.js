@@ -147,6 +147,7 @@ for(var i = 0; i < header_arr.length; i++) {
 		var item = document.getElementById(ids);
 		var items = document.getElementById('article_01').getElementsByClassName('item');
 		c(items[0]);
+		c(getComputedStyle(item));
 
 		if (!item.classList.contains('header_open')) {
 
