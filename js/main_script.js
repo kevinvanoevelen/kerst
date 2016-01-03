@@ -23,7 +23,7 @@ wrapper.style.minHeight = (inner_height-(wrapper_top+wrapper_bottom)) + "px";
 
 // header random image picker
 
-var img_random = Math.floor(Math.random()*5);
+var random = Math.floor(Math.random()*5);
 
 var img_arr = [
 		"baubles_02.svg",
@@ -33,14 +33,14 @@ var img_arr = [
 		"santa_classic_03.jpg"
 	];
 
-var img = img_arr[img_random];
+var img = img_arr[random];
 
 var img_loc = document.getElementById('logo');
 
 img_loc.src = "./img/header/" + img;
 img_loc.data = img;
 
-var timeout_header_img = setTimeout(check_img,100);
+var timeout_check_img = setTimeout(check_img,100);
 
 function check_img() {
 	if (img_loc.width == 96) {
