@@ -15,3 +15,5 @@ function p(mess) {
 function c(mess) {
 	console.log(mess);
 };
+
+

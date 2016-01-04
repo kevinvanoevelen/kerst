@@ -315,37 +315,37 @@ section aside .side_item_04 {
 	/*position: relative;*/
 	overflow: hidden;
 	width: 252px;
-	height: 202px; /* 80% width_side_item */
+	height: 252px; /*202px; /* 80% width_side_item */
 	margin: 0px 0px 0px 0px;
 	/*background: rgba(177,77,177,0.8);*/
 }
 
 .side_item_04 .mass_04 {
 	position: absolute;
-	top: -554px; /* 2 times side_item + (width_side_item - height_side_item)*/
-	left: -252px; /* 1 times side_item */
-	width: 756px; /* 3 times side_item */
-	height: 756px;
+	top: -504px; /*-554px; /* 2 times side_item + (width_side_item - height_side_item)*/
+	left: -252px; /*-252px; /* 1 times side_item */
+	width: 756px; /*756px; /* 3 times side_item */
+	height: 756px; /*756px;*/
 	border-radius: 50%;
 	background: rgba(30,45,40,0.9);
 }
 
 .side_item_04 .cut_04 {
 	position: absolute;
-	top: -292px; /* 1 times side_item + (width_side_item - height_side_item) */
+	top: -635px; /*-292px; /* 1 times side_item + (width_side_item - height_side_item) */
 	/*left: -376px;*/
-	width: 504px; /* 2 times side_item */
-	height: 504px;
+	width: 1008px; /*504px; /* 2 times side_item */
+	height: 1008px; /*504px;*/
 	border-radius: 50%;
 	background: rgba(40,40,37,1);
 }
 
 .side_item_04 .cut_04_a {
-	left: -378px; /* 1.5 times side_item */
+	left: -855px; /*-378px; /* 1.5 times side_item */
 }
 
 .side_item_04 .cut_04_b {
-	right: -378px; /* 1.5 times side_item */
+	right: -855px; /*-378px; /* 1.5 times side_item */
 }
 
 section aside .side_item_05 {

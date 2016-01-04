@@ -305,4 +305,3 @@ function open_close(self,id,in_out) {
 
 
 
-
