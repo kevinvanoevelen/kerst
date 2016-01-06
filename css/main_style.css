@@ -172,12 +172,12 @@ section .article_01 .item {
 }
 
 section .article_02 {
-	/*overflow: hidden;*/
+	overflow: hidden;
 	position: relative;
 	top: 60px;
 	/*float: right;*/
 	width: 252px;
-	min-height: 370px;
+	min-height: 390px;
 	/*border: 1px solid rgba(245,245,155,0.1);*/
 	/*background: pink;*/
 }

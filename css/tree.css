@@ -5,8 +5,9 @@
 
 /* general styles */
 section .article_02 aside {
-	/*overflow: hidden;*/
+	overflow: hidden;
 	position: relative;
+	top: 18px;
 	/*float: right;*/
 	width: 252px;
 	min-height: 370px;
@@ -261,7 +262,7 @@ section .article_02 .side_item_05 {
 
 .star {
 	position: absolute;
-	top: -16px;
+	top: 0px;
 	left: 116px;
 	width: 20px;
 	height: 20px;
