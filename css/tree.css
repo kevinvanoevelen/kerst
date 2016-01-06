@@ -1,0 +1,294 @@
+
+
+/* STYLING FOR THE CHRISTMAS TREE */
+/* ****************************** */
+
+/* general styles */
+section .article_02 aside {
+	/*overflow: hidden;*/
+	position: relative;
+	/*float: right;*/
+	width: 252px;
+	min-height: 370px;
+	border-bottom: 1px solid rgba(245,245,155,0.04);
+	/*background: pink;*/
+}
+
+section .article_02 .side_item {
+	position: absolute;
+	margin: 0px 0px 0px 0px;
+	/*background: rgba(77,77,177,0.8);*/
+}
+
+section .article_02 .tree_top_layer .side_item .cut {
+	box-shadow: 0px 0px 2px 0px rgba(245,245,155,0.1) inset;
+	background: rgba(45,45,42,1);
+}
+
+
+/* both */
+/* **************************************************************************************************************************** */
+
+/* side item 1 */
+/* *********** */
+
+section .article_02 .side_item_01 {
+	top: -10px;
+	left: 60px;
+	overflow: hidden;
+	width: 132px;
+	height: 132px;
+	margin: 0px auto 0px auto;
+	/*background: rgba(77,177,177,0.8);*/
+}
+
+.side_item_01 .mass_01 {
+	position: absolute;
+	top: -264px; /* 305  */
+	left: -132px;
+	width: 396px;
+	height: 396px;
+	border-radius: 50%;
+	/*box-shadow: 0px 0px 2px 0px rgba(245,245,155,0.1) inset;*/
+	background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/
+}
+
+.side_item_01 .cut_01 {
+	position: absolute;
+	top: -330px;
+	/*left: -376px;*/
+	width: 528px;
+	height: 528px;
+	border-radius: 50%;
+	/*background: rgba(40,40,37,1);*/
+}
+
+.side_item_01 .cut_01_a {
+	left: -450px;
+}
+
+.side_item_01 .cut_01_b {
+	right: -450px;
+}
+
+/* side item 2 */
+/* *********** */
+section .article_02 .side_item_02 {
+	top: 10px;
+	left: 40px;
+	overflow: hidden;
+	width: 172px;
+	height: 172px;
+	margin: 0px auto 0px auto;
+	/*z-index: -1;*/
+	/*background: rgba(177,177,177,0.8);*/
+}
+
+.side_item_02 .mass_02 {
+	position: absolute;
+	top: -344px;
+	left: -172px;
+	width: 516px;
+	height: 516px;
+	border-radius: 50%;
+	/*box-shadow: 0px 0px 2px 0px rgba(245,245,155,0.1) inset;*/
+	background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/
+}
+
+.side_item_02 .cut_02 {
+	position: absolute;
+	top: -430px;
+	/*left: -376px;*/
+	width: 688px;
+	height: 688px;
+	border-radius: 50%;
+	/*background: rgba(40,40,37,1);*/
+}
+
+.side_item_02 .cut_02_a {
+	left: -586px;
+}
+
+.side_item_02 .cut_02_b {
+	right: -586px;
+}
+
+
+/* side item 3 */
+/* *********** */
+section .article_02 .side_item_03 {
+	top: 35px;
+	left: 20px;
+	overflow: hidden;
+	width: 212px;
+	height: 212px;
+	margin: 0px auto 0px auto;
+	/*z-index: -2;*/
+	/*background: rgba(127,77,177,0.8);*/
+}
+
+.side_item_03 .mass_03 {
+	position: absolute;
+	top: -424px; /* 2 times side_item */
+	left: -212px; /* 1 times side_item */
+	width: 636px; /* 3 times side_item */
+	height: 636px; /* 3 times side_item */
+	border-radius: 50%;
+	/*box-shadow: 0px 0px 2px 0px rgba(245,245,155,0.1) inset;*/
+	background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/
+}
+
+.side_item_03 .cut_03 {
+	position: absolute;
+	top: -530px; /* 2.5 times side_item */
+	/*left: -376px;*/
+	width: 848px; /* 4 times side_item */
+	height: 848px; /* 4 times side_item */
+	border-radius: 50%;
+	/*background: rgba(40,40,37,1);*/
+}
+
+.side_item_03 .cut_03_a {
+	left: -723px; /* 3 times side_item + 88px to line up the sides with the side tips of the tree */
+	/*background: rgba(140,40,37,0.31);*/
+}
+
+.side_item_03 .cut_03_b {
+	right: -723px; /* 3 times side_item + 88px to line up the sides with the side tips of the tree */
+	/*background: rgba(40,40,137,0.31);*/
+}
+
+
+/* side item 4 */
+/* *********** */
+section .article_02 .side_item_04 {
+	top: 60px;
+	left: 0px;
+	overflow: hidden;
+	width: 252px;
+	height: 252px; 
+	margin: 0px 0px 0px 0px;
+	/*z-index: -3;*/
+	/*background: rgba(177,77,177,0.8);*/
+}
+
+.side_item_04 .mass_04 {
+	position: absolute;
+	top: -504px; /* 2 times side_item */
+	left: -252px; /* 1 times side_item */
+	width: 756px; /* 3 times side_item */
+	height: 756px; /* 3 times side_item */
+	border-radius: 50%;
+	/*box-shadow: 0px 0px 2px 0px rgba(245,245,155,0.1) inset;*/
+	background: rgba(30,45,40,1);
+}
+
+.side_item_04 .cut_04 {
+	position: absolute;
+	top: -630px; /* 2.5 times side_item */
+	/*left: -376px;*/
+	width: 1008px; /* 4 times side_item */
+	height: 1008px; /* 4 times side_item */
+	border-radius: 50%;
+	/*background: rgba(40,40,37,1);*/
+}
+
+.side_item_04 .cut_04_a {
+	left: -859px; /* 3 times side_item + 104px to line up the sides with the side tips of the tree */
+	/*background: rgba(140,40,37,0.51);*/
+}
+
+.side_item_04 .cut_04_b {
+	right: -859px; /* 3 times side_item + 104px to line up the sides with the side tips of the tree */
+	/*background: rgba(40,40,137,0.51);*/
+}
+
+
+/* side item 5 */
+/* *********** */
+section .article_02 .side_item_05 {
+	top: 305px;
+	left: 0px;
+	width: 100%;
+	height: 55px;
+	margin: 0px 0px 0px 0px;
+	/*z-index: -4;*/
+	/*background: rgba(177,77,77,0.8);*/
+}
+
+.side_item_05 .stam {
+	width: 40px;
+	height: 55px;
+	margin: 0px auto;
+	/*box-shadow: 0px 0px 2px 1px rgba(245,245,155,0.1);*/
+	background: rgba(40,15,15,1);
+}
+
+
+
+/* top */
+/* **************************************************************************************************************************** */
+
+/*section .article_02 .tree_top_layer {
+	/*display: none;
+	top: -380px;
+}*/
+
+/*.side_item .mass_top {
+	background: green;
+}*/
+
+/*section .article_02 .tree_top_layer .side_item .cut {
+	box-shadow: 0px 0px 2px 0px rgba(245,245,155,0.1) inset;
+	background: transparent;
+}*/
+
+
+/* bottom */
+/* **************************************************************************************************************************** */
+
+.side_item .mass_bottom {
+	box-shadow: 0px 0px 2px 1px rgba(245,245,155,0.1);
+}
+
+.side_item_05 .stam_bottom {
+	box-shadow: 0px 0px 2px 1px rgba(245,245,155,0.1);
+}
+
+
+
+/* items */
+
+.star {
+	position: absolute;
+	top: -16px;
+	left: 116px;
+	width: 20px;
+	height: 20px;
+	background: url('../img/spare_balls/star_01.png');
+	background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
