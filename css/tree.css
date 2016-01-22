@@ -222,9 +222,8 @@ section .article_02 .side_item_05 {
 	height: 55px;
 	margin: 0px auto;
 	/*box-shadow: 0px 0px 2px 1px rgba(245,245,155,0.1);*/
-	background: rgba(35,25,25,1);
+	background: rgba(30,25,20,1);
 }
-
 
 
 /* top */
@@ -271,7 +270,7 @@ section .article_02 .side_item_05 {
 	background-size: cover;
 }
 
-.garland {
+/*.garland {
 	position: absolute;
 	top: 205px;
 	left: 5px;
@@ -281,6 +280,84 @@ section .article_02 .side_item_05 {
 	background-size: cover;
 	transform: rotate(-25deg);
 	opacity: 0.6;
+}*/
+
+
+/* lights */
+/* ****** */
+.lightbands {
+	position: absolute;
+	background: rgba(222,111,222,0.1);
+}
+.lightband_01 {
+	top: 54px;
+	left: 116px;
+	width: 20px;
+	height: 10px;
+	transform: rotate(-31deg);
+	transform-origin: 1px;
+}
+
+/*.lightband_02 {
+	top: 75px;
+	left: 102px;
+	width: 42px;
+	height: 10px;
+	transform: rotate(-30deg);
+	transform-origin: 10px;
+}*/
+
+.lightband_02 {
+	top: 112px;
+	left: 78px;
+	width: 82px;
+	height: 10px;
+	transform: rotate(-36deg);
+	transform-origin: 10px;
+}
+
+.lightband_03 {
+	top: 170px;
+	left: 60px;
+	width: 125px;
+	height: 15px;
+	transform: rotate(-30deg);
+	transform-origin: 10px;
+}
+
+.lightband_04 {
+	top: 225px;
+	left: 45px;
+	width: 160px;
+	height: 20px;
+	transform: rotate(-24deg);
+	transform-origin: 10px;
+}
+
+.lightband_05 {
+	top: 288px;
+	left: 30px;
+	width: 190px;
+	height: 20px;
+	transform: rotate(-22deg);
+	transform-origin: 10px;
+}
+
+.lightband_06 {
+	top: 305px;
+	left: 110px;
+	width: 95px;
+	height: 10px;
+	transform: rotate(-20deg);
+	transform-origin: 10px;
+}
+
+.lights {
+	position: absolute;
+	width: 3px;
+	height: 8px;
+	border-radius: 50%;
+	background: rgba(254,252,162,0.6);
 }
 
 

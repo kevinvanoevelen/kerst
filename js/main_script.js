@@ -48,8 +48,7 @@ function check_img() {
 		img_loc.style.background = "#6F5A55";
 		img_loc.style.border = "1px solid rgba(65,25,12,0)";
 
-		set_shadow();
-		setTimeout(function() { set_radius(); },1600)
+		setTimeout(function() { set_radius(); set_shadow();},1600)
 		
 	} else {
 
