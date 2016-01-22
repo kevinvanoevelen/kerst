@@ -287,7 +287,7 @@ section .article_02 .side_item_05 {
 /* ****** */
 .lightbands {
 	position: absolute;
-	background: rgba(222,111,222,0.1);
+	/*background: rgba(222,111,222,0.1);*/
 }
 .lightband_01 {
 	top: 54px;
@@ -344,8 +344,8 @@ section .article_02 .side_item_05 {
 }
 
 .lightband_06 {
-	top: 305px;
-	left: 110px;
+	top: 300px;
+	left: 125px;
 	width: 95px;
 	height: 10px;
 	transform: rotate(-20deg);
@@ -355,8 +355,9 @@ section .article_02 .side_item_05 {
 .lights {
 	position: absolute;
 	width: 3px;
-	height: 8px;
+	height: 6px;
 	border-radius: 50%;
+	/*box-shadow: 0px 0px 4px 0px rgba(254,252,62,0.7);*/
 	background: rgba(254,252,162,0.6);
 }
 

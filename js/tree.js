@@ -30,8 +30,8 @@ function christmas_lights() {
 
 		get_transform();
 
-		var extra = Math.floor(Math.random()*2)*5;
-		var lights_num = Math.floor((width/(35+extra))+1);
+		// var extra = Math.floor(Math.random()*2)*5;
+		var lights_num = Math.floor((width/(35+5))+1);
 
 		var pos_sect = width/(lights_num*2);
 		var pos = 0;
@@ -45,7 +45,7 @@ function christmas_lights() {
 			light.classList.add('lights');
 			light.id = "light_" + n;
 
-			var height_rand = Math.ceil(Math.random()*(height*0.75)-n*2);
+			var height_rand = Math.ceil(Math.random()*(height*0.75)-n*1.5);
 
 			light.style.top = (height_rand) + "px";
 
@@ -67,7 +67,50 @@ function christmas_lights() {
 
 
 
+function lights_flicker() {
 
+	var timer = (Math.floor(Math.random()*600)+200);
+
+	setInterval(function() {
+
+		// timer = 1122; //(Math.floor(Math.random()*600));
+
+		// console.log(timer); 
+		flicker();
+		setTimeout(function() {
+			timer = (Math.floor(Math.random()*600)+200);
+			// console.log(timer); 
+		},timer);
+
+	},timer);
+
+	function flicker() {
+		var lights = document.getElementsByClassName('lights');
+		for (var i = 0; i < lights.length; i++) {
+
+			var light = lights[i];
+
+			// console.log(light);
+			var opac = Math.floor(Math.random()*100)/100;
+			light.style.boxShadow = "0px 0px 4px 0px rgba(254,252,62," + opac + ")";
+			// console.log(opac);
+
+		};
+	};
+
+		// setInterval(function() {
+		// 		console.log(light); 
+		// 		flicker(light);
+		// 		setTimeout(function() {
+
+		// 		},1100);
+		// 	},1000);
+
+		// setTimeout(function() {
+
+		// },1100);
+
+}; lights_flicker();
 
 
 
