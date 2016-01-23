@@ -13,53 +13,56 @@ function christmas_lights() {
 
 			var styles = window.getComputedStyle(lightband);
 			var rotation = styles.getPropertyValue("transform");
-
 			var rot_arr = rotation.split(',');
-			var rot_arr_aid = rot_arr[0].split('(');
 
-			rot_deg = rot_arr_aid[0] + "(" + (rot_arr_aid[1]*1) + "," + (rot_arr[1]*(-1)) + "," + (rot_arr[2]*(-1)) + "," + (rot_arr[3]*(1)) + "," + rot_arr[4] + "," + rot_arr[5];
+			rot_deg = rot_arr[0] + "," + (rot_arr[1]*(-1)) + "," + (rot_arr[2]*(-1)) + "," + (rot_arr[3]*(1)) + "," + rot_arr[4] + "," + rot_arr[5];
+
+		};
+
+		var make_lights = function() {
+
+			var lights_num = Math.floor((width/(35+5))+1);
+			var pos_sect = width/(lights_num*2);
+			var pos = 0;
+
+			for (var n = 0; n < lights_num; n++) {
+
+				pos = pos + pos_sect;
+
+				var light = document.createElement('div');
+				lightband.appendChild(light);
+				light.classList.add('lights');
+				light.id = "light_" + n;
+
+				var height_rand = Math.ceil(Math.random()*(height*0.75)-n*1.5);
+
+				light.style.top = (height_rand) + "px";
+
+				if (lights_num === 1) {
+
+					light.style.left = (pos/2+2) + "px";
+
+				} else {
+
+					light.style.left = (pos) + "px";
+
+				};
+
+				light.style.transform = rot_deg;
+
+				pos = pos + pos_sect;
+
+			};
 
 		};
 
 		var lightband = lightbands[i];
-
 		var rot_deg = {};
-
 		var width = lightband.clientWidth;
 		var height = lightband.clientHeight;
 
 		get_transform();
-
-		// var extra = Math.floor(Math.random()*2)*5;
-		var lights_num = Math.floor((width/(35+5))+1);
-
-		var pos_sect = width/(lights_num*2);
-		var pos = 0;
-
-		for (var n = 0; n < lights_num; n++) {
-
-			pos = pos + pos_sect;
-
-			var light = document.createElement('div');
-			lightband.appendChild(light);
-			light.classList.add('lights');
-			light.id = "light_" + n;
-
-			var height_rand = Math.ceil(Math.random()*(height*0.75)-n*1.5);
-
-			light.style.top = (height_rand) + "px";
-
-			if (lights_num === 1) {
-				light.style.left = (pos/2+2) + "px";
-			} else {
-				light.style.left = (pos) + "px";
-			};
-
-			light.style.transform = rot_deg;
-
-			pos = pos + pos_sect;
-
-		};
+		make_lights();
 
 	};
 
@@ -69,46 +72,39 @@ function christmas_lights() {
 
 function lights_flicker() {
 
-	var timer = (Math.floor(Math.random()*600)+200);
+	var timer = (Math.floor(Math.random()*400)+200);
 
-	setInterval(function() {
+	function control_flicker() {
 
-		// timer = 1122; //(Math.floor(Math.random()*600));
-
-		// console.log(timer); 
-		flicker();
 		setTimeout(function() {
-			timer = (Math.floor(Math.random()*600)+200);
-			// console.log(timer); 
+
+			flicker();
+
+			timer = (Math.floor(Math.random()*400)+200);
+
+			control_flicker();
+
 		},timer);
 
-	},timer);
+	};
 
 	function flicker() {
+	
 		var lights = document.getElementsByClassName('lights');
+	
 		for (var i = 0; i < lights.length; i++) {
 
 			var light = lights[i];
 
-			// console.log(light);
 			var opac = Math.floor(Math.random()*100)/100;
+
 			light.style.boxShadow = "0px 0px 4px 0px rgba(254,252,62," + opac + ")";
-			// console.log(opac);
 
 		};
+
 	};
 
-		// setInterval(function() {
-		// 		console.log(light); 
-		// 		flicker(light);
-		// 		setTimeout(function() {
-
-		// 		},1100);
-		// 	},1000);
-
-		// setTimeout(function() {
-
-		// },1100);
+	control_flicker();
 
 }; lights_flicker();
 
@@ -119,7 +115,69 @@ function lights_flicker() {
 
 
 
+/*
 
+var interval = setInterval(anim,5);
+
+function set_radius(rad) {
+
+	document.getElementById(self).style.borderBottomLeftRadius = rad + "px";
+
+	document.getElementById(self).style.borderBottomRightRadius = rad + "px";
+
+};
+
+function set_style() {
+
+	if (height > h_upper) { height = h_upper; } else if (height < h_lower) { height = h_lower; };
+
+	if (opac > o_upper) { opac = o_upper; } else if (opac < o_lower) { opac = o_lower; };
+
+	document.getElementById(id).style.height = height + "px";
+
+	document.getElementById(id).style.background = "rgba(177,77,77," + opac.toFixed(2) + ")";
+
+};
+
+function anim() {
+
+	if ((opr == (-1) && height <= h_lower) || (opr == 1 && height >= h_upper)) {
+
+		clearInterval(interval);
+
+		if (opr == (-1)) {
+
+			heigth = h_lower;
+			opac = o_lower;
+
+			set_style();
+
+			set_radius(6);
+
+		} else if (opr == 1) {
+
+			height = h_upper;
+			opac = o_upper;
+
+			set_style();
+
+		};
+
+		// setTimeout(function() { window.location.href = "#" + id; },200);
+
+	} else {
+		
+		set_style();
+
+		height = (height+(speed_ctrl*opr));
+		opac = (opac+((speed_ctrl*0.0012)*opr));
+		speed_ctrl = (speed_ctrl+0.25);
+
+	};
+
+};
+
+*/
 
 
 

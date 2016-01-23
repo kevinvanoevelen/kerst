@@ -149,7 +149,6 @@ for(var i = 0; i < header_arr.length; i++) {
 		c(getComputedStyle(item));
 
 		if (!item.classList.contains('header_open')) {
-
 			
 			for(var i = 0; i < items.length; i++) {
 				c("in items loop: " + items[i].classList);
