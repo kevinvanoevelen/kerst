@@ -34,6 +34,11 @@ function christmas_lights() {
 				light.classList.add('lights');
 				light.id = "light_" + n;
 
+				var red = (Math.floor(Math.random()*180)+76);
+				var green = (Math.floor(Math.random()*160)+76);
+				var blue = (Math.floor(Math.random()*180)+76);
+				var colour = "rgba(" + red + "," + green + "," + blue + ",0.6)";
+
 				var height_rand = Math.ceil(Math.random()*(height*0.75)-n*1.5);
 
 				light.style.top = (height_rand) + "px";
@@ -49,6 +54,8 @@ function christmas_lights() {
 				};
 
 				light.style.transform = rot_deg;
+
+				light.style.background = colour;
 
 				pos = pos + pos_sect;
 
@@ -95,10 +102,25 @@ function lights_flicker() {
 		for (var i = 0; i < lights.length; i++) {
 
 			var light = lights[i];
+			var styles = window.getComputedStyle(light);
+			var background_colour = styles.getPropertyValue("background-color");
+			var background_main_arr = background_colour.split('(');
+			var background_sec_arr = background_main_arr[1].split(')');
+			var coulours = background_sec_arr[0].split(',');
+			var red = coulours[0];
+			var green = coulours[1];
+			var blue = coulours[2];
+			var rgba = background_main_arr[0];
+			var for_col = "(";
+			var back_col = ")";
+			var comma = ",";
+			var background = rgba + for_col + red + comma + green + comma + blue + comma + opac + back_col;
+			var shadow = "0px 0px 2px 0px " + background;
+			// c(red + " " + green + " " + blue);
+			var opac =  Math.floor(Math.random()*80)/100+0.2;
 
-			var opac = Math.floor(Math.random()*100)/100;
-
-			light.style.boxShadow = "0px 0px 4px 0px rgba(254,252,62," + opac + ")";
+			light.style.boxShadow = shadow;
+			light.style.background = background;
 
 		};
 
