@@ -26,6 +26,10 @@ section .article_02 .tree_top_layer .side_item .cut {
 	background: rgba(45,45,42,1);
 }
 
+section .article_02 .tree_top_layer .side_item .mass {
+	background: rgba(20,22,19,1); /*rgba(15,40,15,0.8);*/
+}
+
 
 /* both */
 /* **************************************************************************************************************************** */
@@ -51,7 +55,7 @@ section .article_02 .side_item_01 {
 	height: 396px;
 	border-radius: 50%;
 	/*box-shadow: 0px 0px 2px 0px rgba(245,245,155,0.1) inset;*/
-	background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/
+	/*background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/*/
 }
 
 .side_item_01 .cut_01 {
@@ -93,7 +97,7 @@ section .article_02 .side_item_02 {
 	height: 516px;
 	border-radius: 50%;
 	/*box-shadow: 0px 0px 2px 0px rgba(245,245,155,0.1) inset;*/
-	background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/
+	/*background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/*/
 }
 
 .side_item_02 .cut_02 {
@@ -136,7 +140,7 @@ section .article_02 .side_item_03 {
 	height: 636px; /* 3 times side_item */
 	border-radius: 50%;
 	/*box-shadow: 0px 0px 2px 0px rgba(245,245,155,0.1) inset;*/
-	background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/
+	/*background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/*/
 }
 
 .side_item_03 .cut_03 {
@@ -181,7 +185,7 @@ section .article_02 .side_item_04 {
 	height: 756px; /* 3 times side_item */
 	border-radius: 50%;
 	/*box-shadow: 0px 0px 2px 0px rgba(245,245,155,0.1) inset;*/
-	background: rgba(30,45,40,1);
+	/*background: rgba(30,45,40,1);*/
 }
 
 .side_item_04 .cut_04 {
@@ -298,21 +302,12 @@ section .article_02 .side_item_05 {
 	transform-origin: 1px;
 }
 
-/*.lightband_02 {
-	top: 75px;
-	left: 102px;
-	width: 42px;
-	height: 10px;
-	transform: rotate(-30deg);
-	transform-origin: 10px;
-}*/
-
 .lightband_02 {
 	top: 112px;
 	left: 78px;
 	width: 82px;
 	height: 10px;
-	transform: rotate(-36deg);
+	transform: rotate(-32deg);
 	transform-origin: 10px;
 }
 
@@ -339,13 +334,13 @@ section .article_02 .side_item_05 {
 	left: 30px;
 	width: 190px;
 	height: 20px;
-	transform: rotate(-22deg);
+	transform: rotate(-24deg);
 	transform-origin: 10px;
 }
 
 .lightband_06 {
 	top: 300px;
-	left: 125px;
+	left: 120px;
 	width: 95px;
 	height: 10px;
 	transform: rotate(-20deg);

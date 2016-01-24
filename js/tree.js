@@ -35,9 +35,9 @@ function christmas_lights() {
 				light.id = "light_" + n;
 
 				var red = (Math.floor(Math.random()*180)+76);
-				var green = (Math.floor(Math.random()*160)+76);
-				var blue = (Math.floor(Math.random()*180)+76);
-				var colour = "rgba(" + red + "," + green + "," + blue + ",0.6)";
+				var green = (Math.floor(Math.random()*110)+126);
+				var blue = (Math.floor(Math.random()*160)+96);
+				var colour = "rgba(" + red + "," + green + "," + blue + ",0.499)";
 
 				var height_rand = Math.ceil(Math.random()*(height*0.75)-n*1.5);
 
@@ -96,31 +96,45 @@ function lights_flicker() {
 	};
 
 	function flicker() {
-	
+
+		var styles, background_colour, background_main_arr, background_sec_arr, colours, red, green, blue, rgba, comma, for_col, back_col, opac, background, shadow;
+
 		var lights = document.getElementsByClassName('lights');
 	
 		for (var i = 0; i < lights.length; i++) {
 
-			var light = lights[i];
-			var styles = window.getComputedStyle(light);
-			var background_colour = styles.getPropertyValue("background-color");
-			var background_main_arr = background_colour.split('(');
-			var background_sec_arr = background_main_arr[1].split(')');
-			var coulours = background_sec_arr[0].split(',');
-			var red = coulours[0];
-			var green = coulours[1];
-			var blue = coulours[2];
-			var rgba = background_main_arr[0];
-			var for_col = "(";
-			var back_col = ")";
-			var comma = ",";
-			var background = rgba + for_col + red + comma + green + comma + blue + comma + opac + back_col;
-			var shadow = "0px 0px 2px 0px " + background;
-			// c(red + " " + green + " " + blue);
-			var opac =  Math.floor(Math.random()*80)/100+0.2;
+			function get_colours() {
+				styles = window.getComputedStyle(light);
+				background_colour = styles.getPropertyValue("background-color");
+				background_main_arr = background_colour.split('(');
+				background_sec_arr = background_main_arr[1].split(')');
+				colours = background_sec_arr[0].split(',');
+				rgba = background_main_arr[0];
+				red = colours[0];
+				green = colours[1];
+				blue = colours[2];
+				opac = Math.floor(Math.random()*80)/100+0.2;
+				if (opac > 0.6) { opac = 0.998; var opac_sol = 0.998; } else if (opac <= 0.6) { opac = 0.001; var opac_sol = 0.499; };
+				for_col = "(";
+				back_col = ")";
+				comma = ",";
+				background_opac = rgba + for_col + red + comma + green + comma + blue + comma + opac.toFixed(3) + back_col;
+				background_sol = rgba + for_col + red + comma + green + comma + blue + comma + opac_sol.toFixed(3) + back_col;
+				shadow = "0px 0px 4px 0px " + background_opac;
+			};
 
-			light.style.boxShadow = shadow;
-			light.style.background = background;
+			function set_style() {
+				
+				if (i%2 === 0) {console.log("prop: " + background_sol + " shadow= " + shadow + " opac=" + opac.toString())};
+
+				light.style.boxShadow = shadow;
+				light.style.background = background_sol;
+			};
+
+			var light = lights[i];
+			
+			get_colours();
+			set_style();
 
 		};
 
