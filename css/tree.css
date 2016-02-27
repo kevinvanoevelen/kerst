@@ -351,9 +351,9 @@ section .article_02 .side_item_05 {
 	position: absolute;
 	width: 3px;
 	height: 6px;
-	border-radius: 50%;
+	/*border-radius: 50%;*/
 	/*box-shadow: 0px 0px 4px 0px rgba(254,252,62,0.7);*/
-	background: rgba(254,252,162,0.6);
+	/*background: rgba(254,252,162,0.6);*/
 }
 
 

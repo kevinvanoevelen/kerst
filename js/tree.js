@@ -9,6 +9,8 @@ function christmas_lights() {
 
 	for (var i = 0; i < lightbands.length; i++) {
 
+		var band_num = i;
+
 		var get_transform = function() {
 
 			var styles = window.getComputedStyle(lightband);
@@ -30,9 +32,10 @@ function christmas_lights() {
 				pos = pos + pos_sect;
 
 				var light = document.createElement('div');
-				lightband.appendChild(light);
 				light.classList.add('lights');
-				light.id = "light_" + n;
+				light.id = "light_" + (band_num+1) + "_" + (n+1);
+				var ids = light.id;
+				c(ids);
 
 				var red = (Math.floor(Math.random()*180)+76);
 				var green = (Math.floor(Math.random()*110)+126);
@@ -40,6 +43,8 @@ function christmas_lights() {
 				var colour = "rgba(" + red + "," + green + "," + blue + ",0.499)";
 
 				var height_rand = Math.ceil(Math.random()*(height*0.75)-n*1.5);
+
+				lightband.appendChild(light);
 
 				light.style.top = (height_rand) + "px";
 
@@ -58,6 +63,11 @@ function christmas_lights() {
 				light.style.background = colour;
 
 				pos = pos + pos_sect;
+
+				document.getElementById(ids).style.borderRadius = "50%";
+				light.style.width = "3px";
+
+				setTimeout(function() {},10);
 
 			};
 
@@ -125,7 +135,7 @@ function lights_flicker() {
 
 			function set_style() {
 				
-				if (i%2 === 0) {console.log("prop: " + background_sol + " shadow= " + shadow + " opac=" + opac.toString())};
+				// if (i%2 === 0) {console.log("prop: " + background_sol + " shadow= " + shadow + " opac=" + opac.toString())};
 
 				light.style.boxShadow = shadow;
 				light.style.background = background_sol;
@@ -217,7 +227,46 @@ function anim() {
 
 
 
+/*
 
+function christmas_lights() {
+	
+	var make_lights = function() {
+
+		var lightbands = document.getElementsByClassName('lightbands');
+		var bands_num = lightbands.length;
+		var band_itr = 0;
+
+		var create_lights = function() {
+
+
+
+		};
+
+		var set_style = function() {
+				
+		};
+
+		var lights_on = function() {
+			var light = light[light_itr];
+			if ((light_itr+1) >== light_num) {
+				set_style();
+			} else {
+				set_style();
+				light_itr++;
+				lights_on();
+			};
+		};
+		
+	};
+
+	var lights_flicker = function() {
+		
+	};
+
+}
+
+*/
 
 
 
