@@ -6,7 +6,7 @@
 var inner_width = window.innerWidth;
 var inner_height = window.innerHeight;
 
-
+console.log(inner_height);
 //setting the min-height of the .wrapper for dev in early stages so it is open with footer at the bottom
 
 var wrapper = document.getElementById('wrapper');
