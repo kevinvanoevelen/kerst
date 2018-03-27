@@ -55,7 +55,7 @@ section .article_02 .side_item_01 {
 	height: 396px;
 	border-radius: 50%;
 	/*box-shadow: 0px 0px 2px 0px rgba(245,245,155,0.1) inset;*/
-	/*background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/*/
+	/*background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/
 }
 
 .side_item_01 .cut_01 {
@@ -97,7 +97,7 @@ section .article_02 .side_item_02 {
 	height: 516px;
 	border-radius: 50%;
 	/*box-shadow: 0px 0px 2px 0px rgba(245,245,155,0.1) inset;*/
-	/*background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/*/
+	/*background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/
 }
 
 .side_item_02 .cut_02 {
@@ -140,7 +140,7 @@ section .article_02 .side_item_03 {
 	height: 636px; /* 3 times side_item */
 	border-radius: 50%;
 	/*box-shadow: 0px 0px 2px 0px rgba(245,245,155,0.1) inset;*/
-	/*background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/*/
+	/*background: rgba(30,45,40,1); /*rgba(15,40,15,0.8);*/
 }
 
 .side_item_03 .cut_03 {
