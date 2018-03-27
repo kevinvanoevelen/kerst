@@ -25,13 +25,13 @@ wrapper.style.minHeight = (inner_height-(wrapper_top+wrapper_bottom)) + "px";
 
 // var random = Math.floor(Math.random()*5);
 
-// var img_arr = [
+/* var img_arr = [
 		"baubles_02.svg",
 		"retro_christmas_card.jpg",
 		"retro_santa_03.jpg",
 		"retro_snowman_02.jpg",
 		"santa_classic_03.jpg"
-	];
+	]; */
 
 var img = "retro_christmas_card.jpg"; // img_arr[random]
 
@@ -40,22 +40,24 @@ var img_loc = document.getElementById('logo');
 img_loc.src = "./img/header/" + img;
 img_loc.data = img;
 
-// var timeout_check_img = setTimeout(check_img,100);
+var timeout_check_img = setTimeout(check_img,100);
 
 function check_img() {
-	if (img_loc.width == 96) {
+	//if (img_loc.width == 96) {
 
-		img_loc.style.background = "#6F5A55";
-		img_loc.style.border = "1px solid rgba(65,25,12,0)";
+	//	img_loc.style.background = "#6F5A55";
+	//	img_loc.style.border = "1px solid rgba(65,25,12,0)";
 
-		setTimeout(function() { set_radius(); set_shadow();},1600)
+	//	setTimeout(function() { set_radius(); set_shadow();},1600)
 		
-	} else {
+	//} else {
 
-		img_loc.style.borderRadius = "5%";
-		if (img_loc.data !== "baubles_02.svg") { img_loc.style.border = "1px solid rgba(255,245,220,0.8)"; set_shadow(); };  // 
+	//	img_loc.style.borderRadius = "5%";
+	//	if (img_loc.data !== "baubles_02.svg") { img_loc.style.border = "1px solid rgba(255,245,220,0.8)"; set_shadow(); };  // 
 
-	};
+	//};
+	
+	set_shadow()
 
 };
 
